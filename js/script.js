@@ -4,16 +4,17 @@ createApp({
     data() {
         return{
             title: 'API',
-            randomEmail: '',
+            randomEmail: [],
             basePath:'https://flynn.boolean.careers/exercises/api/'
         }
     },
     methods: {
         getData(){
+            this.randomEmail = [];
             for(let i = 0; i < 10; i++){
                 axios.get(this.basePath + 'random/mail').then((res)=> {
                     console.log(res.data.response);
-                    this.randomEmail += res.data.response;
+                    this.randomEmail.push(res.data.response);
                 });
             }
         }
