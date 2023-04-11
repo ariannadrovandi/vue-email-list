@@ -3,7 +3,7 @@ const {createApp} = Vue;
 createApp({
     data() {
         return{
-            title: 'API',
+            title: 'API email',
             randomEmail: [],
             basePath:'https://flynn.boolean.careers/exercises/api/'
         }
